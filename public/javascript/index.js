@@ -107,17 +107,17 @@ for (i = 0; i < layer; i++) {
     else {
         boxArray[i].style.backgroundImage =
             `url(./public/images/${Object.keys(material)[randomMaterialNum]}.png)`;
-        boxArray[i].style.backgroundSize = '75% 100%';
-        if (i === layer - 2 && layer % 2 === 0 && layer != 2) {
-            boxArray[i].style.backgroundImage = 'url("./public/images/egg.png")';
-        }
-        //fiedFish-image-fix
+        boxArray[i].style.backgroundSize = '75% 90%';
         if (Object.keys(material)[randomMaterialNum] === 'firedFish' 
-        || i != layer - 2 ) {
+        ) {
             console.log(Object.keys(material)[randomMaterialNum]);
             boxArray[i].style.backgroundImage = `url(./public/images/friedFish.png)`;
             boxArray[i].style.backgroundSize = '65% 55%';
         }
+        if (i === layer - 2 && layer % 2 === 0 && layer != 2) {
+            boxArray[i].style.backgroundImage = 'url("./public/images/egg.png")';
+        }
+        //fiedFish-image-fix
     }
 }
 
